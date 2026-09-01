@@ -1,0 +1,30 @@
+name: HAPulse
+version: "1.3.2"
+slug: hapulse
+description: >-
+  A calm, modern alternative dashboard for Home Assistant. Rooms, media,
+  security, energy, automations and scenes — all in one place, connected
+  directly from your browser over WebSocket. No data leaves your network.
+url: https://github.com/whiteNsky/HAPulse-HAOS
+arch:
+  - amd64
+  - aarch64
+
+image: ghcr.io/jlnbln/hapulse
+
+startup: application
+boot: auto
+init: false
+
+ports:
+  80/tcp: 7421
+ports_description:
+  80/tcp: HAPulse web interface
+
+webui: http://[HOST]:[PORT:80]/
+
+panel_icon: mdi:pulse
+panel_title: HAPulse
+
+options: {}
+schema: {}
